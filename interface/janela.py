@@ -1,11 +1,13 @@
 import PySimpleGUI as sg
 import requests as rq
 
-
+# Busca uma resposta no endereço da API
 dadosUsuario = rq.get("http://127.0.0.1:5000/user")
-dadosUsuario = dadosUsuario.json()
-print(dadosUsuario)
 
+# Transforma a resposta obtida em um objeto
+dadosUsuario = dadosUsuario.json()
+
+# Cria o layout da janela
 layout = (
     [
         [sg.Text("Usuário")],
@@ -17,7 +19,7 @@ layout = (
     ],
 )
 
-
+# Inicia a janela e atribui os respectivos valores do objeto para o nome de usuario e a senha
 def iniciarTela():
     window = sg.Window("Login", layout=layout)
     while True:

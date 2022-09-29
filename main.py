@@ -1,3 +1,4 @@
+# Tem o intuito de iniciar o servidor e a aplicação simultaneamente
 from server import servidor as sv
 from interface import janela as jn
 

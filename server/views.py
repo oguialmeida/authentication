@@ -1,5 +1,7 @@
+# A biblioteca funciona como um "estacionamento" de rotas para poder modularizar a aplicação
 from flask import Blueprint, jsonify
 
+# Estabelece uma prioridade de leitura antes da refatoração
 views = Blueprint(__name__, "views")
 
 
